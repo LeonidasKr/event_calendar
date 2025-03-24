@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь событий</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Календарь событий</h1>
+    </header>
+    <main>
+        <section class="calendar-container">
+            <nav class="calendar-header">
+                <button id="prevMonth">&#9665;</button>
+                <h2 id="currentMonth">Март 2025</h2>
+                <button id="nextMonth">&#9655;</button>
+            </nav>
+            <div class="calendar-grid">
+                <!-- Дни недели -->
+                <div class="day-name">Пн</div>
+                <div class="day-name">Вт</div>
+                <div class="day-name">Ср</div>
+                <div class="day-name">Чт</div>
+                <div class="day-name">Пт</div>
+                <div class="day-name">Сб</div>
+                <div class="day-name">Вс</div>
+                <!-- Ячейки календаря будут заполняться динамически -->
+            </div>
+        </section>
+        <section class="events-container">
+            <h2>События</h2>
+            <ul id="eventList">
+                <!-- События будут загружены через API -->
+            </ul>
+        </section>
+        <section class="event-form">
+            <h2>Добавить событие</h2>
+            <form id="eventForm">
+                <label for="eventTitle">Название события:</label>
+                <input type="text" id="eventTitle" name="eventTitle" required>
+
+                <label for="eventDate">Дата:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+
+                <label for="eventDescription">Описание:</label>
+                <textarea id="eventDescription" name="eventDescription" required></textarea>
+
+                <button type="submit">Добавить</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
